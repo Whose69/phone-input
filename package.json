@@ -12,13 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-"src/**/*.{js,jsx,json,css}": [
-  "prettier --write",
-  "git add"
-]
+    "precommit": "pretty-quick --staged"
   },
   "devDependencies": {
     "eslint-config-prettier": "^2.9.0",
