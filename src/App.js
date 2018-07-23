@@ -6,12 +6,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      inputPhoneNumber: "",
       formattedUSStandard: ""
     };
   }
 
-  changeFormattedNumber(formattedUSStandardValue) {
+  changeFormattedNumber(inputPhoneNumberValue, formattedUSStandardValue) {
     this.setState({
+      inputPhoneNumber: inputPhoneNumberValue,
       formattedUSStandard: formattedUSStandardValue
     });
   }
@@ -20,6 +22,7 @@ class App extends React.Component {
     return (
       <InputHandler
         onChange={this.changeFormattedNumber.bind(this)}
+        inputPhoneNumberState={this.state.inputPhoneNumber}
         formattedUSStandardState={this.state.formattedUSStandard}
       />
     );
