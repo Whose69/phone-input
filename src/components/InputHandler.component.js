@@ -62,19 +62,17 @@ export class InputHandler extends React.Component {
     return (
       <div className="phone-input-contatiner">
         <form>
-          <div className="form-input-row">
-            <input
-              className="phone-input"
-              type="tel"
-              placeholder="Start typing a phone number"
-              value={this.props.formattedUSStandardState}
-              onChange={this.handleNumberInput.bind(this)}
-            />
-          </div>
-          <div className="form-input-row">
-            <div className="formatted-phone-input-row">
-              {"Value: " + this.props.inputPhoneNumberState}
-            </div>
+          <input
+            className="phone-input form-row"
+            type="tel"
+            placeholder="Start typing a phone number"
+            value={this.props.formattedUSStandardState}
+            onChange={this.handleNumberInput.bind(this)}
+          />
+          <div className="formatted-phone-input-row form-row">
+            {this.props.inputPhoneNumberState.length > 0
+              ? "Value: +1" + this.props.inputPhoneNumberState
+              : "Value: "}
           </div>
         </form>
       </div>

@@ -1,25 +1,22 @@
-.App {
-  text-align: center;
+form {
+  width: 250px;
 }
 
-.input-contatiner {
-  display: grid;
-  position: fixed;
-  height: 50px;
-  width: 200px;
-  top: 50%;
-  left: 50%;
-  margin-top: -25px;
-  margin-left: -100px;
-}
-
-input[type="tel"]::-webkit-inner-spin-button,
-input[type="tel"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+.form-row {
+  width: 100%;
+  height: calc(0.3rem * 6);
 }
 
 .phone-input {
-  width: 250px;
-  height: 100px;
-  vertical-align: middle;
+  border-style: none;
+  border-bottom: 1px solid grey;
+  font-size: 15px;
+}
+
+::placeholder {
+  font-size: 15px;
+}
+
+.phone-input:focus {
+  outline-width: 0;
 }
